@@ -77,6 +77,7 @@ class SqlHelper {
     );
   }
 
+  //separation
   Future<void> updateIsCompleted(int id, int isCompleted) async {
     Database db = await getDatabase();
     await db.update(
@@ -86,7 +87,8 @@ class SqlHelper {
       whereArgs: [id],
     );
   }
-
+  
+  //search
   Future<List<Map<String, dynamic>>> search(String title) async {
     Database db = await getDatabase();
     return await db.query(
